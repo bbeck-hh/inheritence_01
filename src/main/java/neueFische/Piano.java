@@ -5,6 +5,7 @@ public class Piano extends Instrument{
     private int numberOfOctaves;
 
     public Piano(double price, String color, int numberOfOctaves) {
+        // Kommt aus dem Konstruktor von Instrument
         super(price, color);
         this.numberOfOctaves = numberOfOctaves;
     }
@@ -18,9 +19,15 @@ public class Piano extends Instrument{
     }
 
     @Override
+    public void makeNoise() {
+        //super.makeNoise();
+        System.out.println("Leichte Piano Musik");
+    }
+
+    @Override
     public String toString() {
         return "Piano{" +
-                "numberOfOctaves=" + numberOfOctaves +
+                "numberOfOctaves Wie viel Tasten: " + numberOfOctaves +
                 "} " + super.toString();
     }
 }
